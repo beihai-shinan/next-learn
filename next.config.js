@@ -33,6 +33,7 @@ module.exports = withPlugins([withLess,withCss], {
       '@/pages': path.resolve(__dirname, 'pages'),
       '@/store': path.resolve(__dirname, 'store'),
       '@/types': path.resolve(__dirname, 'types'),
+      '@/remark': path.resolve(__dirname, 'remark'),
     }
     if(config.externals){
       const includes = [/antd/];

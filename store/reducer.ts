@@ -2,27 +2,24 @@ import ACTIONS from './actions';
 import { IState } from '@/types/store';
 
 export const initialState:Partial<IState> = {
-  userInfo: {
-    name: 'zhang san',
-    age: 18,
-    address: 'wo ge guang change',
-    group: 'group 1'
-  },
-  simpleInfo: {
-    zipcode: 95008,
-    is_shipping_order: true,
-    city: 'city1'
-  }
+  userInfo: {},
+  simpleInfo: {}
 }
 
 const reducer = (state=initialState, action) => {
   switch(action.type) {
-    case ACTIONS.ADD: {
-      return {
-        ...state,
-        ...action.payload
-      }
+    case ACTIONS.UPDATE_NAME: {
+      const newState = {...state};
+      const info = action.payload;
+      newState.userInfo = info
+      return newState;
     }
+    case ACTIONS.ADD: {
+      const newState = {...state};
+      const info = action.payload;
+      newState.simpleInfo = info
+      return newState;
+    } 
     default: {
       return state;
     }

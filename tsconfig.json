@@ -24,6 +24,7 @@
       "@/pages/*": ["pages/*"],
       "@/store/*": ["store/*"],
       "@/types/*": ["types/*"],
+      "@/remark/*": ["store/*"],
     }
   },
   "exclude": ["node_modules"],

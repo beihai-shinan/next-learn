@@ -10,32 +10,25 @@ type Props = {
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <div className={styles.layout}>
-    <Head>
+    {/* <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
+    </Head> */}
+    <h1>react context</h1>
+
     <header className={styles.header}>
       <nav>
         <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
+          <a>首页</a>
+        </Link>
+        &nbsp;&nbsp;{'|'}&nbsp;&nbsp;
         <Link href="/about">
-          <a>About</a>
+          <a>关于</a>
         </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
       </nav>
     </header>
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
   </div>
 )
 

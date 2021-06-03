@@ -1,3 +1,4 @@
 export default {
-  "ADD": "ADD"
+  "UPDATE_NAME": "UPDATE_NAME",
+  "ADD": "ADD",
 }
