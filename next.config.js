@@ -1,10 +1,11 @@
 const withLess = require("@zeit/next-less");
 const withCss = require("@zeit/next-css");
 const withPlugins = require("next-compose-plugins");
+const nextTranslate = require("next-translate");
 const cssLoaderGetLocalIdent = require("css-loader/lib/getLocalIdent.js");
 const path = require('path');
 
-module.exports = withPlugins([withLess,withCss], {
+module.exports = withPlugins([nextTranslate, withLess,withCss], {
   lessLoaderOptions : {//如果是antd就需要，antd-mobile不需要
     javascriptEnabled : true
   },
@@ -34,6 +35,8 @@ module.exports = withPlugins([withLess,withCss], {
       '@/store': path.resolve(__dirname, 'store'),
       '@/types': path.resolve(__dirname, 'types'),
       '@/remark': path.resolve(__dirname, 'remark'),
+      '@/utils': path.resolve(__dirname, 'utils'),
+      '@/service': path.resolve(__dirname, 'service'),
     }
     if(config.externals){
       const includes = [/antd/];

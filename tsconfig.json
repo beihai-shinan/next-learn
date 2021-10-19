@@ -25,6 +25,8 @@
       "@/store/*": ["store/*"],
       "@/types/*": ["types/*"],
       "@/remark/*": ["store/*"],
+      "@/utils/*": ["utils/*"],
+      "@/service/*": ["service/*"],
     }
   },
   "exclude": ["node_modules"],
